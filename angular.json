@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularPF": {
+    "WodProof-Ang": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angularPF",
+            "outputPath": "dist/WodProof-Ang",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -59,18 +59,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angularPF:build"
+            "browserTarget": "WodProof-Ang:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angularPF:build:production"
+              "browserTarget": "WodProof-Ang:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularPF:build"
+            "browserTarget": "WodProof-Ang:build"
           }
         },
         "test": {
@@ -104,7 +104,7 @@
         }
       }
     },
-    "angularPF-e2e": {
+    "WodProof-Ang-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angularPF:serve"
+            "devServerTarget": "WodProof-Ang:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angularPF:serve:production"
+              "devServerTarget": "WodProof-Ang:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "angularPF"
+  "defaultProject": "WodProof-Ang"
 }
