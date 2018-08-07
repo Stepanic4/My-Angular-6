@@ -1,28 +1,13 @@
-<div class="container">
-    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate method="post">
-        <div class="col-5">
-            <label for="firstName">First Name</label>
-            <input id="firstName" type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName"
-                   #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required/>
-            <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
-                <div *ngIf="firstName.errors.required">First Name is required</div>
-            </div>
-        </div>
+<div class="container py-5">
+    <input type="text" (keyup)="onNameKeyUp($event)">
+    <button (click)="getProfile()">Get Profile</button>
+    <br>
+    <div *ngIf="found">
+        <span>{{name}} age is {{age}}</span>
+    </div>
+</div>
+<div class="container py-5">
 
-        <div class="col-5">
-            <label for="lastName">Last Name</label>
-            <input id="lastName" type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName"
-                   #lastName="ngModel"
-                   [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required/>
-            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
-                <div *ngIf="lastName.errors.required">Last Name is required</div>
-            </div>
-        </div>
+    <button (click)="postProfile()">Post Profile</button>
 
-        <div class="pt-3 col-5">
-            <button type="submit" class="btn btn-primary cursor-pointer btn-submit">
-                Save data
-            </button>
-        </div>
-    </form>
 </div>
