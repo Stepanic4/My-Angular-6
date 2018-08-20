@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Wodproof_init } from '../../../assets/js/wodproof';
 
 @Component({
   selector: 'app-navigation',
@@ -10,6 +11,6 @@ export class NavigationComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+      Wodproof_init();
   }
-
 }

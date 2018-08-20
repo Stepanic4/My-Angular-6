@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
     styleUrls: ['./editor.component.scss']
 })
 export class EditorComponent implements OnInit {
-    name: string = '';
+    name: string;
     age: number;
     found: boolean;
 
