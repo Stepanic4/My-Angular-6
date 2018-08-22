@@ -32,3 +32,18 @@ body {
   width: 100%;
   min-height:calc(100vh - 60px);
 }
+
+//==============================================Media Queries============================
+@media (max-width: 992px) {
+  .home-page {
+    min-height: 100vh;
+  }
+
+  .user-page {
+    min-height: 100vh;
+  }
+
+  .about-page {
+    min-height: 100vh;
+  }
+}
