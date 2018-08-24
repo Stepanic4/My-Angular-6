@@ -18,19 +18,19 @@ body {
 .home-page {
   background-color: $blue;
   width: 100%;
-  min-height:calc(100vh - 60px);
+  min-height:calc(100vh - 50px);
 }
 
 .user-page {
   background-color: $lilac;
   width: 100%;
-  min-height:calc(100vh - 60px);
+  min-height:calc(100vh - 50px);
 }
 
 .about-page {
   background-color: $melon;
   width: 100%;
-  min-height:calc(100vh - 60px);
+  min-height:calc(100vh - 50px);
 }
 
 //==============================================Media Queries============================
