@@ -20,12 +20,13 @@ export class EditorComponent implements OnInit {
     }
 
     getProfile() {
-        this.httpClient.get('http://192.168.1.188:8080/api/qualifiers/list')
+        this.httpClient.get('http://httpbin.org/get')
             .subscribe(
                 (data: any[]) => {
                     if (data.length) {
                         this.age = data[0].age;
                         this.found = true;
+                        console.log('It`s work!');
                     }
                     if (data.length) {
                         console.log('DON`T WORK');
@@ -35,7 +36,7 @@ export class EditorComponent implements OnInit {
     }
 
     postProfile() {
-        this.httpClient.post('http://192.168.1.188:8080/api/qualifiers/upload_model',
+        this.httpClient.post('http://httpbin.org/post',
             {
                 last: true,
                 list: [

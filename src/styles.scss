@@ -1,18 +1,30 @@
 /* =====Created by Ivan Zolotukhin====== */
 /* You can add global styles to this file, and also import other style files */
 
-$blue: #709fc4;
-$lilac: #c29dd4;
-$melon: #e2e5a4;
+
+//***********color**********
+$blue: rgba(127, 183, 226, 0.35);
+$lilac: rgba(119, 173, 217, 1);
+$melon: rgba(70, 175, 171, 0.69);
+
+
+//========General class========
+.pt-50 {
+  padding-top: 50px;
+}
 //=================Preloader=============
 
-//===============ENDpreloader============
+//===============END preloader============
+
 body {
   height: 100vh;
   width: 100%;
   color: #ffffff;
   font-weight: 400;
   font-size: 20px;
+}
+.content {
+  padding: 24px 24px 1px;
 }
 
 .home-page {
@@ -33,17 +45,7 @@ body {
   min-height:calc(100vh - 50px);
 }
 
-//==============================================Media Queries============================
-@media (max-width: 992px) {
-  .home-page {
-    min-height: 100vh;
-  }
-
-  .user-page {
-    min-height: 100vh;
-  }
-
-  .about-page {
-    min-height: 100vh;
-  }
+.z-input {
+  margin: 40px 3%;
+  position: relative;
 }

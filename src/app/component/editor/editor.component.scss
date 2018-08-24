@@ -1,0 +1,103 @@
+/*= input focus effects css
+=========================== */
+:focus {
+  outline: none;
+}
+
+input[type="text"] {
+  font: 15px/24px "Lato", Arial, sans-serif;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+.effect-1 {
+  border: 0;
+  padding: 4px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+}
+
+.effect-1 ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3399FF;
+  transition: 0.4s;
+}
+
+.effect-1:focus ~ .focus-border,
+.has-content.effect-16 ~ .focus-border {
+  width: 100%;
+  transition: 0.4s;
+}
+
+.effect-1 ~ label {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 9px;
+  color: #aaa;
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 0.5px;
+}
+
+.effect-1:focus ~ label, .has-content.effect-1 ~ label {
+  top: -16px;
+  font-size: 12px;
+  color: #3399FF;
+  transition: 0.3s;
+}
+
+/*= input focus effects css End
+=============================== */
+.material.form-group input {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #6c757d;
+  transition: .3s;
+  padding: 0;
+}
+
+.material.form-group input:focus {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  border-bottom: 1px solid #007bff;
+  box-shadow: 0 1px 0 0 #007bff;
+}
+
+.no-ph {
+  position: relative;
+  margin-top: 1.2rem;
+}
+
+.no-ph input {
+  height: 2.3rem;
+}
+
+.no-ph label {
+  position: absolute;
+  font-size: 1rem;
+  top: 0.4rem;
+  left: 0;
+  transition: .3s;
+  cursor: text;
+}
+
+.no-ph input:focus ~ label, .no-ph label.active {
+  top: -1rem;
+  font-size: 0.75rem;
+  color: #007bff;
+}
+
+/*= input  End
+=============================== */
+
+/*= Button load
+=============================== */
+
