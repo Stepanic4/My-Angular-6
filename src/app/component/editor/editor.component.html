@@ -1,6 +1,9 @@
 <div class="content">
-    <div class="row pt-50">
-        <div class="col-6">
+    <div class="row pt-50 px-20">
+        <div class="col-6 block">
+            <div class="block-title">
+                Card User
+            </div>
             <div class="z-input no-ph">
                 <input (keyup)="onNameKeyUp($event)" class="effect-1" type="text" placeholder="">
                 <label>Test value</label>
@@ -12,7 +15,7 @@
             </div>
 
             <div class="col-3">
-                <button (click)="getProfile()">Get Profile</button>
+                <button class="z-btn" (click)="getProfile()">Get Profile</button>
             </div>
 
             <div class="input-effect">
@@ -39,12 +42,13 @@
                 </div>
             </div>
 
-            <div class="col-3 load-btn">
-                <button (click)="postProfile()" data-label="Do it!">Post file</button>
+            <div class="col-3">
+                <button class="z-btn" (click)="postProfile()" data-label="Do it!">Post file</button>
             </div>
         </div>
-
-
     </div>
 
+
+
+    
 </div>

@@ -5,10 +5,25 @@
   max-width: 100%;
   margin:0 auto;
   padding: 0;
+
+  -webkit-box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.75);
 }
 
-.logo img {
-  width: 150px;
+.logo {
+  width: 100%;
+  text-align: left;
+  img {
+    max-width: 100px;
+  }
+}
+
+.logo-mobile {
+  text-align: center;
+  img {
+    max-width: 100px;
+  }
 }
 
 #menu {
@@ -21,8 +36,15 @@
 }
 
 #menu ul {
-  display: inline-grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+
   align-items: center;
   padding:0;
   margin:0;
