@@ -37,6 +37,27 @@ $melon: rgba(70, 175, 171, 0.69);
 }
 //=================Preloader=============
 
+#preloader {
+  position: fixed;
+  text-align: center;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #000000;
+}
+
+canvas {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 //===============END preloader============
 
 body {
@@ -88,5 +109,18 @@ body {
     border-color: rgba(52, 110, 188, 0.98);
     color: #c3c3c3;
     transition: 0.5s;
+  }
+}
+
+//================MEDIA QUERIES===========
+@media (max-width: 992px) {
+  .home-page {
+    min-height: 100vh;
+  }
+  .user-page {
+    min-height: 100vh;
+  }
+  .about-page {
+    min-height: 100vh;
   }
 }
