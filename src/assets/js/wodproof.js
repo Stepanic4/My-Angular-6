@@ -150,7 +150,7 @@ export function Wodproof_init() {
     setTimeout(function () {
         $('#preloader').fadeOut('slow', function () {
         });
-    }, 1000);
+    }, 500);
 // ============================END Preloader=========================
 }
 
