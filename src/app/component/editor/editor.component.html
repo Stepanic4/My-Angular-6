@@ -1,50 +1,8 @@
 <div class="content">
     <div class="row pt-50 px-20">
-        <div class="col-md-6 block">
-            <div class="block-title">
-                Card User
-            </div>
-            <div class="z-input no-ph">
-                <input (keyup)="onNameKeyUp($event)" class="effect-1" type="text" placeholder="">
-                <label>Test value</label>
-                <span class="focus-border"></span>
-
-                <div *ngIf="found">
-                    <span>{{name}} age is {{age}}</span>
-                </div>
-            </div>
-
-            <div class="col-3">
-                <button class="z-btn" (click)="getProfile()">Get Profile</button>
-            </div>
-
-            <div class="input-effect">
-                <div class="z-input">
-                    <input class="effect-1" type="text" placeholder="">
-                    <label>First Name</label>
-                    <span class="focus-border"></span>
-                </div>
-            </div>
-
-            <div class="input-effect">
-                <div class="z-input">
-                    <input class="effect-1" type="text" placeholder="">
-                    <label>Last Name</label>
-                    <span class="focus-border"></span>
-                </div>
-            </div>
-
-            <div class="input-effect">
-                <div class="z-input">
-                    <input class="effect-1" type="text" placeholder="">
-                    <label>Address</label>
-                    <span class="focus-border"></span>
-                </div>
-            </div>
-
-            <div class="col-3">
-                <button class="z-btn" (click)="postProfile()" data-label="Do it!">Post file</button>
-            </div>
+        <div class="col-md-6 block" *ngFor="let us of user">
+            <p>{{us.title}}</p>
+            <p>{{us.description}}</p>
         </div>
     </div>
 

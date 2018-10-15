@@ -3,21 +3,17 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WodProof-Ang": {
+    "WodProof": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {
-        "@schematics/angular:component": {
-          "styleext": "scss"
-        }
-      },
+      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/WodProof-Ang",
+            "outputPath": "dist/WodProof",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,14 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/popper.js/dist/popper.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -59,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "WodProof-Ang:build"
+            "browserTarget": "WodProof:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "WodProof-Ang:build:production"
+              "browserTarget": "WodProof:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "WodProof-Ang:build"
+            "browserTarget": "WodProof:build"
           }
         },
         "test": {
@@ -81,7 +72,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": [],
             "assets": [
@@ -104,7 +95,7 @@
         }
       }
     },
-    "WodProof-Ang-e2e": {
+    "WodProof-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -112,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "WodProof-Ang:serve"
+            "devServerTarget": "WodProof:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "WodProof-Ang:serve:production"
+              "devServerTarget": "WodProof:serve:production"
             }
           }
         },
@@ -132,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "WodProof-Ang"
+  "defaultProject": "WodProof"
 }

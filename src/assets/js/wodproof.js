@@ -3,7 +3,7 @@ export function Wodproof_init() {
 // ===========BURGER=========
     $(document).ready(function () {
 
-        var $menu = $("#menu");
+        let $menu = $("#menu");
 
         $(window).scroll(function () {
             if ($(this).scrollTop() > 100 && $menu.hasClass("default")) {
@@ -35,7 +35,7 @@ export function Wodproof_init() {
     });//jQuery
 
 
-    var $xBar = $(".x-bar"),
+    let $xBar = $(".x-bar"),
         $sideNav = $(".side-nav"),
         $menuIcon = $(".menu-icon");
     $menuIcon.click(function () {
@@ -77,21 +77,10 @@ export function Wodproof_init() {
         }
     });
 // ========END Burger=======
-// ===========INPUT=========
-    $(document).ready(function () {
-        $('.no-ph input').on('input', function () {
-            if ($(this).val() !== "") {
-                $(this).siblings('label').addClass('active');
-            } else {
-                $(this).siblings('label').removeClass('active');
-            }
-        });
-    });
 
-// ========END input========
 // ==============================Preloader===========================
 
-    var M = Math,
+    let M = Math,
         PI = M.PI,
         TWOPI = PI * 2,
         HALFPI = PI / 2,
@@ -112,11 +101,11 @@ export function Wodproof_init() {
         requestAnimationFrame(loop);
         ctx.clearRect(-width / 2, -height / 2, width, height);
         ctx.fillStyle = '#fff';
-        var angle = tick / 8,
+        let angle = tick / 8,
             radius = -50 + M.sin(tick / 15) * 100,
             size;
 
-        for (var i = 0; i < count; i++) {
+        for (let i = 0; i < count; i++) {
             angle += PI / 64;
             radius += i / 30;
             size = sizeBase + i / sizeDiv;
