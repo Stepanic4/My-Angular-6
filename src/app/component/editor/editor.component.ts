@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Users} from '../../services/editor.service';
 import {Wodproof_init} from '../../../assets/js/wodproof';
-import {CurrentUsersService} from '../../services/current-users.service';
+import {HttpClient} from '@angular/common/http';
+// import {CurrentUsersService} from '../../services/current-users.service';
 
 @Component({
     selector: 'app-editor',
@@ -10,16 +11,16 @@ import {CurrentUsersService} from '../../services/current-users.service';
 })
 export class EditorComponent implements OnInit {
 
-    user: Users;
+    user: Users[] = [];
 
-    constructor(private currentUser: CurrentUsersService) {
+    constructor(private http: HttpClient) {
     }
 
 
 
     ngOnInit() {
 
-        this.currentUser.getUsers();
+        this.http.get('erio.json').subscribe((data: Users) => this.user = data['userList']);
 
         Wodproof_init();
     }

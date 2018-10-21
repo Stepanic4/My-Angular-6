@@ -7,4 +7,6 @@ export class Users {
     visibility: boolean;
     promo_code: number;
     backgroundColor: string;
+    age: number;
+    name: string;
 }
