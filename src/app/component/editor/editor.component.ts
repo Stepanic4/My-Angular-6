@@ -20,7 +20,7 @@ export class EditorComponent implements OnInit {
 
     ngOnInit() {
 
-        this.http.get('erio.json').subscribe((data: Users) => this.user = data['userList']);
+        this.http.get('http://165.227.140.66/competitions.json').subscribe((data: Users[]) => this.user = data);
 
         Wodproof_init();
     }
