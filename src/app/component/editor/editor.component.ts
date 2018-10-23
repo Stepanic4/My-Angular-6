@@ -20,7 +20,12 @@ export class EditorComponent implements OnInit {
 
     ngOnInit() {
 
-        this.http.get('http://165.227.140.66/competitions.json').subscribe((data: Users[]) => this.user = data);
+        this.http.get('https://api.github.com/users/seeschweiler').subscribe((data: Users) => this.user);
+
+        // this.http.get('https://api.github.com/users/seeschweiler').subscribe(data => {
+        //     console.log(data);
+        // });
+
 
         Wodproof_init();
     }
