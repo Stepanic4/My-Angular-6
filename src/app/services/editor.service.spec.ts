@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { EditorService } from './editor.service';
+import { EditorService } from './qualifiers.service';
 
 describe('EditorService', () => {
   beforeEach(() => {

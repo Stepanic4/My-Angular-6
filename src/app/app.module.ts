@@ -6,17 +6,19 @@ import { HomeComponent } from './component/home/home.component';
 import { UserComponent } from './component/user/user.component';
 import { AboutComponent } from './component/about/about.component';
 import { NavigationComponent } from './component/navigation/navigation.component';
-import { EditorComponent } from './component/editor/editor.component';
+import { QualifiersComponent } from './component/qualifiers/qualifiers.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EditInfoComponent } from './component/edit-info/edit-info.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'user', component: UserComponent},
   { path: 'about', component: AboutComponent},
+  { path: 'info', component: EditInfoComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     UserComponent,
     AboutComponent,
     NavigationComponent,
-    EditorComponent,
+    QualifiersComponent,
+    EditInfoComponent,
   ],
   imports: [
     BrowserModule,

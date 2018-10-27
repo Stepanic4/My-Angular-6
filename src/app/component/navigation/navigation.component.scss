@@ -28,7 +28,6 @@
   max-width: 100%;
   text-transform: uppercase;
   text-align: center;
-  background: #69c;
 
   text-shadow: 0 1px 1px black;
 }
@@ -71,6 +70,7 @@
   left: 0;
   width: 100%;
   padding: 10px 0;
+  z-index: 1;
 
   -moz-box-shadow: 5px 5px 20px #333;
   -webkit-box-shadow: 5px 5px 20px #333;

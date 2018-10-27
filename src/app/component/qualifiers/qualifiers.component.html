@@ -1,0 +1,18 @@
+<div class="content">
+    <h1 class="text-center py-20 bg-primary">Qualifiers</h1>
+    <div class="row">
+        <div class="col-md-6" *ngFor="let us of user">
+            <div class="block text-center" routerLink="/info" href="javascript:void(0);">
+                <h4 class="text-primary">{{us?.title}}</h4>
+
+                <div class="block-logo">
+                    <img class="img-avatar img-avatar96" src="{{us?.origin_logo_url}}" alt="avatar">
+                </div>
+
+                <h5 class="mt-15 mb-0">{{us?.description}}</h5>
+            </div>
+        </div>
+    </div>
+
+
+</div>
