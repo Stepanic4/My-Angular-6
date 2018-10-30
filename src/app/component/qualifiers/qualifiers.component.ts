@@ -22,6 +22,7 @@ export class QualifiersComponent implements OnInit {
 
         this.http.get<Competition[]>('http://165.227.140.66/competitions.json').subscribe((data: Competition[]) => this.user = data);
 
+        console.log(this.user);
 
         Wodproof_init();
     }
