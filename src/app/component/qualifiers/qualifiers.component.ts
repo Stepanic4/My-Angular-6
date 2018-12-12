@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {Competition} from '../../services/qualifiers.service';
+import {Competition} from '../../model/qualifiers.model';
 import {Wodproof_init} from '../../../assets/js/wodproof';
 import {HttpClient} from '@angular/common/http';
 
 
 @Component({
-    selector: 'app-editor',
+    selector: 'app-qualifiers',
     templateUrl: './qualifiers.component.html',
     styleUrls: ['./qualifiers.component.scss']
 })
